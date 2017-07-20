@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+    int i=0,j,f=0,n,lastdigit;
+    scanf("%d",&n);
+    for(i=pow(2,i);i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            f+=pow(2,(pow(2,i)+2j));
+        }
+    }
+   // printf("%d",f);
+    lastdigit=f%10;
+    printf("%d",lastdigit);
+    return 0;
+}
